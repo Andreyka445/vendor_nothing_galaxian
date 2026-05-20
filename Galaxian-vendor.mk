@@ -527,6 +527,7 @@ PRODUCT_PACKAGES += \
     libladder \
     libmipc \
     libmnetlink_v104 \
+    libmorpho_video_stabilizer \
     libmp3dec_mtk \
     libmpbase \
     libmsbc_mtk \
@@ -853,7 +854,6 @@ PRODUCT_PACKAGES += \
     libmmlpqImpl \
     libmnl \
     libmorpho_RawDeepDenoise \
-    libmorpho_video_stabilizer \
     libmtk_drvb \
     libmtkcam.atmseventmgr \
     libmtkcam.debugwrapper \

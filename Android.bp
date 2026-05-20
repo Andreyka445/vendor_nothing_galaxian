@@ -4407,6 +4407,35 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmorpho_video_stabilizer",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmorpho_video_stabilizer.so",
+            ],
+            shared_libs: [
+                "libui",
+                "libc",
+                "libm",
+                "libdl",
+                "libEGL",
+                "liblog",
+                "libnativewindow",
+                "libGLESv2",
+                "libGLESv3",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmp3dec_mtk",
     owner: "nothing",
     strip: {
@@ -14723,36 +14752,6 @@ cc_prebuilt_library_shared {
                 "libEGL",
                 "libc",
                 "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "mt6878",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmorpho_video_stabilizer",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/mt6878/libmorpho_video_stabilizer.so",
-            ],
-            shared_libs: [
-                "libui",
-                "libc",
-                "libm",
-                "libdl",
-                "libEGL",
-                "liblog",
-                "libnativewindow",
-                "libGLESv2",
-                "libGLESv3",
             ],
         },
     },
